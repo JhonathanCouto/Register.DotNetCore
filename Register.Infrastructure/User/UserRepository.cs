@@ -15,8 +15,7 @@ public class UserRepository : EFRepository<User>, IUserRepository
         Id = user.Id,
         Name = user.Name,
         Email = user.Email,
-        Cpf = user.Cpf,
-        AddressId = user.AddressId
+        Cpf = user.Cpf
     };
 
     public Task<bool> EmailExistsAsync(string email) => Queryable.AnyAsync(user => user.Email == email);

@@ -20,7 +20,7 @@ public sealed class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(entity => entity.Cpf).HasMaxLength(11).IsFixedLength().IsRequired();
 
-        builder.HasOne(entity => entity.Address).WithOne().HasForeignKey<User>(entity => entity.AddressId).IsRequired();
+        builder.HasOne(entity => entity.Address).WithOne().HasForeignKey<User>("AddressId").IsRequired();
 
         builder.Property(entity => entity.CreatedAt).IsRequired();
 
