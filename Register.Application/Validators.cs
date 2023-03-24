@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using DotNetCore.Objects;
+using FluentValidation;
 
 namespace Register.Application;
 
@@ -12,6 +13,7 @@ public static class Validators
 
     public static IRuleBuilderOptions<T, string> Cpf<T>(this IRuleBuilder<T, string> builder) => builder.NotEmpty().Length(11);
 
+    public static IRuleBuilderOptions<T, GridParameters> Grid<T>(this IRuleBuilder<T, GridParameters> builder) => builder.NotEmpty();
 
     public static IRuleBuilderOptions<T, string> Street<T>(this IRuleBuilder<T, string> builder) => builder.NotEmpty();
 

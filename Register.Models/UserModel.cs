@@ -10,6 +10,4 @@ public sealed record UserModel
 
     public string Cpf { get; init; }
 
-    public long AddressId { get; init; }
-
 }
