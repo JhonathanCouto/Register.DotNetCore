@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.Mediator" Version="17.42.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Register.Domain\Register.Domain.csproj" />
+    <ProjectReference Include="..\Register.Infrastructure\Register.Infrastructure.csproj" />
+    <ProjectReference Include="..\Register.Models\Register.Models.csproj" />
+  </ItemGroup>
+
+</Project>
