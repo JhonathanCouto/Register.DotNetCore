@@ -26,4 +26,5 @@ public class UserRepository : EFRepository<User>, IUserRepository
     public Task<Grid<UserModel>> GridAsync(GridParameters parameters) => Queryable.Select(Model).GridAsync(parameters);
 
     public async Task<IEnumerable<UserModel>> ListModelAsync() => await Queryable.Select(Model).ToListAsync();
+
 }

@@ -19,4 +19,14 @@ public sealed class UserController : BaseController
     [HttpGet]
     public IActionResult List() => Mediator.HandleAsync<ListUserRequest, IEnumerable<UserModel>>(new ListUserRequest()).ApiResult();
 
+    [HttpPost]
+    public IActionResult Add(AddUserRequest request) => Mediator.HandleAsync<AddUserRequest, long>(request).ApiResult();
+
+    [HttpPut("{id}")]
+    public IActionResult Update(UpdateUserRequest request) => Mediator.HandleAsync(request).ApiResult();
+
+    [HttpDelete("{id:long}")]
+    public IActionResult Delete(long id) => Mediator.HandleAsync(new DeleteUserRequest(id)).ApiResult();
+
 }
+

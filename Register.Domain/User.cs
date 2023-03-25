@@ -35,4 +35,6 @@ public sealed class User : Entity
 
     public void UpdateEmail(string email) => Email = email; 
 
+    public void UpdateCpf(string cpf) => Cpf = cpf;
+
 }
